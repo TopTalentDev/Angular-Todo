@@ -4,18 +4,18 @@
   <h6 class="mt-1">{{ itemCount }} {{ showComplete ? "" : "Incomplete" }} Items</h6>
 </h3>
 
-<div class="container-fluid">
+<form class="container-fluid" (submit)="addItem(todoText)">
   <div class="row">
     <div class="col">
       <input class="form-control" placeholder="Enter new task" #todoText />
     </div>
     <div class="col-auto">
-      <button class="btn btn-primary" (click)="addItem(todoText.value)">
+      <button class="btn btn-primary">
         Add
       </button>
     </div>
   </div>
-</div>
+</form>
 
 <div class="m-2">
   <table class="table table-striped table-bordered table-sm">

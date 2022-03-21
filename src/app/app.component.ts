@@ -24,10 +24,12 @@ export class AppComponent {
   get items():readonly TodoItem[]{
     return this.list.items.filter(item => this.showComplete || !item.complete);
   }
-  addItem(newItem: string){
+  addItem(newItem){
     if(newItem != ""){
-      this.list.addItem(newItem);
+      this.list.addItem(newItem.value);
+      newItem.value = "";
     }
+
   }
   showComplete: boolean = false;
 }
