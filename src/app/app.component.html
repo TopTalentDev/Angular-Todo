@@ -3,3 +3,17 @@
   {{ username }}'s To Do List
   <h6 class="mt-1">{{ itemCount }} Incomplete Items</h6>
 </h3>
+<table class="table table-striped table-bordered table-sm">
+  <thead>
+  <tr><th>#</th><th>Description</th><th>Done</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.task }}</td>
+      <td [ngSwitch]="item.complete">
+        <span *ngSwitchCase="true">Yes</span>
+        <span *ngSwitchCase="false">No</span>
+      </td>
+    </tr>
+  </tbody>
