@@ -1,6 +1,6 @@
 # TodoApp
 
-![Screenshot of TodoItem](./pic/app.png)]
+![Screenshot of TodoItem](./pic/app.png)
 
 ## Development server
 
